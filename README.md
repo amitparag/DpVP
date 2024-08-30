@@ -1,11 +1,27 @@
 # A Supervised Approach to Reinforcement Learning
-Reinforcement Learning sets it goal as the search for an optimal policy to navigate its immediate environment. To achieve optimal policy, it treats simulators as abstract oracles. In this project, we formulate a actor-critic esque solution of Markov Decision Process that combines a trajectory optimizer with a supervised learning phase, eliminating the need for extensive hyper parameter optimization, huge datasets and humongous training time.
+Deep reinforcement learning uses simulators as abstract oracles to interact with the
+environment. In continuous domains of multi body robotic systems, differentiable
+simulators have recently been proposed but are yet under utilized, even though we
+have the knowledge to make them produce richer information. This problem when
+juxtaposed with the usually high computational cost of exploration-exploitation in
+high dimensional state space can quickly render reinforcement learning algorithms
+impractical. In this paper, we propose to combine learning and simulators such
+that the quality of both increases, while the need to exhaustively search the state
+space decreases. We propose to learn value function and state, control trajectories
+through the locally optimal runs of model based trajectory optimizer. The learned
+value function, along with an estimate of optimal state and control policies, is
+subsequently used in the trajectory optimizer: the value function estimate serves as
+a proxy for shortening the preview horizon, while the state and control approxima-
+tions serve as a guide in policy search for our trajectory optimizer. The proposed
+approach demonstrates a better symbiotic relation, with super linear convergence,
+between learning and simulators, that we need for end-to-end learning of complex
+poly articulated systems.
+
 The source code is released under the [MIT license](LICENSE).
 
 The corresponding publication is available [here](https://hal.archives-ouvertes.fr/hal-03674092v2/document)
 
 **Authors:** [Amit Parag](https://scholar.google.com/citations?user=wsRIfL4AAAAJ&hl=en&oi=ao) <br />
-**Instructors:** [Nicolas Mansard](https://scholar.google.com/citations?user=rq-9xAkAAAAJ&hl=en) <br />
 
 <br /> 
 
@@ -62,10 +78,7 @@ The directory `config/robot_properties_kuka` contains URDF and meshes informatio
 
 <br>
 
-## Acknowledgements
-You can find additional information on a part of this algorithm in [this paper](https://hal.archives-ouvertes.fr/hal-03356261/document) :
 
-Parag, A., Kleff, S., Saci, L., Mansard, N., & Stasse, O. Value learning from trajectory optimization and Sobolev descent : A step toward reinforcement learning with superlinear convergence properties, _International Conference on Robotics and Automation (ICRA) 2022
 
 
 
