@@ -1,0 +1,39 @@
+
+#############################################################
+
+exp_1:
+
+    learning_value:
+        early_stop      :   !!float 5e-6
+        epochs          :   20000
+        lr              :   !!float 1e-3
+        device          :   'cpu'
+
+    learning_xs:
+
+        epochs          :   20000
+        lr              :   !!float 1e-3
+        device          :   'cpu'
+
+    learning_us:
+
+        epochs          :   20000
+        lr              :   !!float 1e-3
+        device          :   'cpu'
+
+
+    datagen_params:
+
+        nb_samples  : 150
+        horizon     : 200
+
+
+    dvp_params:
+
+        episodes  : 20
+        max_action : 20.
+
+
+#############################################################
+
+
