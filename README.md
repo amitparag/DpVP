@@ -4,7 +4,6 @@ Deep reinforcement learning (RL) often relies on simulators as abstract oracles 
 
 The source code is released under the [MIT license](LICENSE).
 
-The corresponding publication is available [here](https://hal.archives-ouvertes.fr/hal-03674092v2/document)
 
 **Authors:** [Amit Parag](https://scholar.google.com/citations?user=wsRIfL4AAAAJ&hl=en&oi=ao) <br />
 
