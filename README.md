@@ -1,21 +1,6 @@
 # A Supervised Approach to Reinforcement Learning
-Deep reinforcement learning uses simulators as abstract oracles to interact with the
-environment. In continuous domains of multi body robotic systems, differentiable
-simulators have recently been proposed but are yet under utilized, even though we
-have the knowledge to make them produce richer information. This problem when
-juxtaposed with the usually high computational cost of exploration-exploitation in
-high dimensional state space can quickly render reinforcement learning algorithms
-impractical. In this paper, we propose to combine learning and simulators such
-that the quality of both increases, while the need to exhaustively search the state
-space decreases. We propose to learn value function and state, control trajectories
-through the locally optimal runs of model based trajectory optimizer. The learned
-value function, along with an estimate of optimal state and control policies, is
-subsequently used in the trajectory optimizer: the value function estimate serves as
-a proxy for shortening the preview horizon, while the state and control approxima-
-tions serve as a guide in policy search for our trajectory optimizer. The proposed
-approach demonstrates a better symbiotic relation, with super linear convergence,
-between learning and simulators, that we need for end-to-end learning of complex
-poly articulated systems.
+Deep reinforcement learning (RL) often relies on simulators as abstract oracles to model interactions within complex environments. While differentiable simulators have recently emerged for multi-body robotic systems, they remain underutilized, despite their potential to provide richer information. This underutilization, coupled with the high computational cost of exploration-exploitation in high-dimensional state spaces, limits the practical application of RL in real-world. We propose a method that integrates learning with differentiable simulators to enhance the efficiency of exploration-exploitation. Our approach learns value functions, state trajectories, and control policies from locally optimal runs of a model-based trajectory optimizer. The learned value function acts as a proxy to shorten the preview horizon, while approximated state and control policies guide the trajectory optimization. We benchmark our algorithm on three classical control problems and a torque-controlled 7 degree-of-freedom robot manipulator arm, demonstrating faster convergence and a more efficient symbiotic relationship between learning and simulation for end-to-end training of complex, poly-articulated systems.
+
 
 The source code is released under the [MIT license](LICENSE).
 
